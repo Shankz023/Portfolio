@@ -15,15 +15,21 @@ const Projects = () => {
         Projects
       </h1>
       <p className="text-center py-8">
-        Lorem Ipsum is simply dummy text of the printing and typesetting
-        industry. Lorem Ipsum has been the industry's standard dummy text ever
-        since the 1500s, when an unknown printer took a galley of type and
-        scrambled it to make a type specimen book. It has survived not only five
-        centuries, but also the leap into electronic typesetting, remaining
-        essentially unchanged. It was popularised in the 1960s with the release
-        of Letraset sheets containing Lorem Ipsum passages, and more recently
-        with desktop publishing software like Aldus PageMaker including versions
-        of Lorem Ipsum.
+        I have a diverse portfolio of projects that showcase my proficiency in
+        various technology stacks. I have delved into the realm of machine
+        learning by developing a predictive model for interview attendance.
+        Additionally, I have ventured into mobile app development using Flutter
+        to create a versatile, cross-platform application for online doctor
+        booking, efficiently integrating Firebase for the backend. My skills
+        extend to web development, as I crafted a hotel management application
+        using Angular 8 and Java Spring Boot, employing MySQL for database
+        management. Lastly, I ventured into library management with a web
+        application built using React and Spring Boot, fortified by OAuth
+        security, CORS handling, and comprehensive test coverage. For data
+        management, I utilized PostgreSQL, and I ensured seamless schema
+        migration using Liquibase. These experiences have honed my ability to
+        tackle complex projects and leverage diverse technologies to create
+        robust and innovative solutions.
       </p>
       <div className="grid sm:grid-cols-2 gap-12">
         <ProjectItem img={machineLearning} title="Attendance Prediction" />
