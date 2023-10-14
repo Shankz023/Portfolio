@@ -1,18 +1,34 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
 
-const ProjectItem = ({ img, title }) => {
+const ProjectItem = ({ img, title, link, description }) => {
   return (
-    <div className="relative flex items-center justify-center h-auto w-full shadow-xl shadow-gray-400 rounded-xl group hover:bg-gradient-to-r from-gray-200 to-[#001b5e]">
-      <img src={img} alt="/" className="rounded-xl group-hover:opacity-30" />
-      <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
-        <h3 className="text-2xl font-bold text-white tracking-wider text-center">
-          {title}
-        </h3>
-        <a href="/">
-          <p className="my-4 text-center p-3 rounded-lg bg-white text-gray-700 font-bold cursor-pointer text-lg">
-            More Info
-          </p>
-        </a>
+    <div className="flex flex-col justify-center ">
+      <div className="group h-96 w-full [perspective:1000px]">
+        <div className="relative h-full w-full rounded-xl shadow-xl transition-all duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+          <div className="absolute inset-0">
+            <img
+              src={img}
+              alt="/"
+              className="h-full w-full rounded-xl object-cover shadow-xl shadow-black/40"
+            />
+          </div>
+          <div className="absolute inset-0 h-full w-full rounded-xl bg-black/60 px-12 text-center text-slate-200 [transform:rotateY(180deg)] [backface-visibility:hidden]">
+            <div className="flex min-h-full flex-col items-center justify-center">
+              <h1 className="text-3xl">{title}</h1>
+              <br />
+              <p className="text-slate-300">{description}</p>
+              <br />
+              <a
+                href={link}
+                className="mt-2 inline-flex justify-center rounded-md bg-neutral-800/60 py-1 px-2 text-sm hover:bg-neutral-900"
+              >
+                <FaGithub className="mt-0.5 mr-1" />
+                Github Link
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

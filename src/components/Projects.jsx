@@ -1,9 +1,16 @@
 import React from "react";
-import machineLearning from "./../assets/ml6.jpg";
+import machineLearning from "./../assets/news.jpg";
 import hotel from "./../assets/hotel.jpg";
 import flutter from "./../assets/flutter.jpg";
 import library from "./../assets/library.jpg";
 import ProjectItem from "./ProjectItem";
+
+const projectDescription = [
+  "This is News web app made using Angular, Html, Css",
+  "This is made by Springboot, Angular 8, Html, Css, Hibernate, MySql",
+  "Cross Platform Mobile Application made using Flutter and Firebase as backend",
+  "This is made using Springboot, Swagger, Psql, Test Containers, JUnit, Liquibase",
+];
 
 const Projects = () => {
   return (
@@ -15,27 +22,50 @@ const Projects = () => {
         Projects
       </h1>
       <p className="text-center py-8">
-        I have a diverse portfolio of projects that showcase my proficiency in
-        various technology stacks. I have delved into the realm of machine
-        learning by developing a predictive model for interview attendance.
-        Additionally, I have ventured into mobile app development using Flutter
-        to create a versatile, cross-platform application for online doctor
-        booking, efficiently integrating Firebase for the backend. My skills
-        extend to web development, as I crafted a hotel management application
-        using Angular 8 and Java Spring Boot, employing MySQL for database
-        management. Lastly, I ventured into library management with a web
-        application built using React and Spring Boot, fortified by OAuth
-        security, CORS handling, and comprehensive test coverage. For data
-        management, I utilized PostgreSQL, and I ensured seamless schema
-        migration using Liquibase. These experiences have honed my ability to
-        tackle complex projects and leverage diverse technologies to create
-        robust and innovative solutions.
+        I have a truly diverse portfolio of projects that powerfully highlight
+        my prowess in various technology stacks. One of my paramount areas of
+        expertise lies in Spring Boot development. While I have ventured into
+        the realm of Angular by developing a cutting-edge News Application, my
+        skills extend far beyond the frontend. For instance, I expertly crafted
+        a hotel management application utilizing Angular 8 in tandem with Java
+        Spring Boot, seamlessly integrating MySQL for robust database
+        management. Furthermore, I delved into library management with a dynamic
+        web application that combines React and Spring Boot, reinforced with
+        top-notch OAuth security, meticulous CORS handling, and a comprehensive
+        test suite. When it comes to data management, I harnessed the power of
+        PostgreSQL and orchestrated seamless schema migration using Liquibase.
+        These experiences have honed my ability to tackle the most complex
+        projects, showcasing my versatility in leveraging diverse technologies
+        to create exceptionally robust and innovative solutions, with Spring
+        Boot development being a standout pillar of my skill set.
       </p>
-      <div className="grid sm:grid-cols-2 gap-12">
-        <ProjectItem img={machineLearning} title="Attendance Prediction" />
-        <ProjectItem img={hotel} title="Hotel Management" />
-        <ProjectItem img={flutter} title="Doctor Booking" />
-        <ProjectItem img={library} title="Library Management" />
+      <div className="grid lg:grid-cols-2 gap-12">
+        <ProjectItem
+          img={machineLearning}
+          title="News Application"
+          link={"https://github.com/Shankz023/NewsAngularApp/tree/master"}
+          description={projectDescription[0]}
+        />
+        <ProjectItem
+          img={hotel}
+          title="Hotel Management Application"
+          link={
+            "https://github.com/Shankz023/Angular_HotelManagementProject/tree/master"
+          }
+          description={projectDescription[1]}
+        />
+        <ProjectItem
+          img={flutter}
+          title="Doctor Booking Application"
+          link={"https://github.com/Shankz023/Online-Clinic-App"}
+          description={projectDescription[2]}
+        />
+        <ProjectItem
+          img={library}
+          title="Library Management Application"
+          link={"https://github.com/Shankz023/library-app"}
+          description={projectDescription[3]}
+        />
       </div>
     </div>
   );

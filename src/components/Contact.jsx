@@ -88,7 +88,6 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("submit");
 
     // Trigger validation for all fields
     validateName();
@@ -96,33 +95,32 @@ const Contact = () => {
     validateMobile();
 
     // Check if there are any validation errors
-    if (errors.name || errors.email || errors.password || errors.phone) {
+    if (errors.name || errors.email || errors.phone) {
       // If there are errors, do not submit the form
       return;
-    }
+    } else {
+      try {
+        const response = await axios.post(
+          "https://getform.io/f/c4c98315-3c20-44b2-b8f7-2685c031a2e5",
+          { ...formData }
+        );
 
-    // If there are no errors, submit the form to Form.io
-    try {
-      const response = await axios.post(
-        "https://getform.io/f/c4c98315-3c20-44b2-b8f7-2685c031a2e5",
-        { ...formData }
-      );
+        // Optionally, reset the form fields
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+        });
 
-      // Optionally, reset the form fields
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-      });
-
-      // Reset the validation errors
-      setErrors({
-        name: "",
-        email: "",
-        phone: "",
-      });
-    } catch (error) {
-      console.error("Error submitting form:", error);
+        // Reset the validation errors
+        setErrors({
+          name: "",
+          email: "",
+          phone: "",
+        });
+      } catch (error) {
+        console.error("Error submitting form:", error);
+      }
     }
   };
 
@@ -202,7 +200,7 @@ const Contact = () => {
         </div>
         <button
           type="submit"
-          className="bg-[#001b5e] text-gray-100 mt-3 w-full p-4 rounded-lg hover:bg-[#5865F2] ease-in "
+          className="bg-black/50 text-gray-100 mt-3 w-full p-4 rounded-lg hover:bg-black/80 ease-in "
         >
           Send Message
         </button>

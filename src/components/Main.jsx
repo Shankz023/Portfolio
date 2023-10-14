@@ -1,26 +1,26 @@
 import React from "react";
-import BackGround from "./../assets/background3.jpg";
+import BackGround from "./../assets/my3.jpeg";
 import { TypeAnimation } from "react-type-animation";
 import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaTwitter,
+  FaGithub,
 } from "react-icons/fa";
 
 const Main = () => {
   return (
     <div id="main">
       <img
-        className="w-full h-screen object-cover object-left scale-x-[-1]"
+        className="w-full h-screen object-cover object-left scale-x-[1]"
         src={BackGround}
       ></img>
-      <div className="w-full h-screen absolute top-0 left-0 bg-white/50">
+      <div className="w-full h-screen absolute top-0 left-0 bg-white/60">
         <div className="max-w-[700px] m-auto h-full w-full flex flex-col justify-center lg:items-start items-center">
-          <h1 className="text-3xl font-bold text-gray-800">
+          <h1 className="text-2xl font-bold text-black">
             Hi! I'm Shankar Kumar Shaw
           </h1>
-          <h2 className="flex sm:text-3xl text-2xl pt-4 text-gray-800">
+          <h2 className="flex sm:text-2xl text-2xl pt-4 text-black">
             I'm a
             <TypeAnimation
               sequence={[
@@ -38,7 +38,11 @@ const Main = () => {
             />
           </h2>
           <div className="flex justify-between pt-6 max-w-[200px] w-full">
-            <FaTwitter className="cursor-pointer" size={20} />
+            <FaGithub
+              href="https://github.com/Shankz023"
+              className="cursor-pointer"
+              size={20}
+            />
             <a href="https://www.facebook.com/M.shankar.shaw">
               <FaFacebookF className="cursor-pointer" size={20} />
             </a>
